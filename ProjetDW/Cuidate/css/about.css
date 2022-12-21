@@ -1,0 +1,38 @@
+
+
+
+
+.about .row{
+    display: flex;
+    align-items: center;
+    background:var(--black);
+    flex-wrap: wrap;
+    box-shadow: 5px 5px 10px rgba(139, 76, 76, 0.753);
+    background-color: var(--boxcol);
+}
+
+.about .row .image{
+    flex:1 1 45rem;
+}
+
+.about .row .image img{
+    width: 100%;
+
+}
+.about .row .content{
+    flex:1 1 45rem;
+    padding:2rem;
+    background-color: var(--boxcol)
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color:#fff;
+}
+
+.about .row .content p{
+    font-size: 1.6rem;
+    color:var(--main-color);
+    padding:1rem 0;
+    line-height: 1.8;
+}
