@@ -20,6 +20,14 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+    table, td {
+    text-align: center; 
+    }
+    tr:nth-child(even),.firsrow {
+    background-color: #f2f2f2;
+    }
+    </style>
 </head>
 
 <body>
@@ -99,16 +107,15 @@ session_start();
                 <div class="settings-page marg-20">
 <div class="table-responsive" ><!-- table-responsive Starts -->
 
-<table class="table table-bordered table-hover table-striped" width="100%"><!-- table table-bordered table-hover table-striped Starts -->
+<table class="table table-bordered table-hover table-striped case margo" width="100%"><!-- table table-bordered table-hover table-striped Starts -->
 
 <thead>
 
-<tr>
+<tr class="firsrow">
 <th>#</th>
 <th>Title</th>
 <th>Delete</th>
 <th>Edit</th>
-
 
 
 </tr>
