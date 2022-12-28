@@ -30,7 +30,7 @@ session_start();
                 <li>
                     <a class="flex align-center fs-14 rad-12 p-10 c-pri" href="index.php">
                         <i class="fa-solid fa-house"></i>
-                        <span>Accueil</span>
+                        <span>Accueil: </span>
                     </a>
                 </li>
                 <li>
