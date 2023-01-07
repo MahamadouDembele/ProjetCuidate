@@ -1,21 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
-:root{
-    --col1:#cbc1b7;
-    --col2:#d2d7da;
-    --col3:#683b23;
-    
-    --boxcol:rgb(204, 158, 121);
-    --col6:#f2f2f2;
-    --col7:#211c13;
-    --col8:#947661;
-    --col9:#c7bbb7;
-    --main-color:#854828;
-    --black:#683b23;
-    --bg:#9e7456;
-    --hove:#b2a79b;
-    --border:.1rem solid rgba(121, 65, 65, 0.3);
-}
 
 *{
     font-family: 'Roboto', sans-serif;
@@ -48,7 +32,8 @@ html::-webkit-scrollbar-thumb{
 }
 
 body{
-    background: var(--bg);
+    
+    background: #854828;
 }
 
 section{
@@ -57,7 +42,7 @@ section{
 
 .heading{
     text-align: center;
-    color:#fff;
+    color:#854828;
     text-transform: uppercase;
     padding-bottom: 3.5rem;
     font-size: 4rem;

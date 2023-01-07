@@ -184,6 +184,7 @@ section{
 .nav_icon{
     font-size: 28px;
     color: #000;
+    position: relative;
 }
 .icon_link{
     margin-right: 1rem;

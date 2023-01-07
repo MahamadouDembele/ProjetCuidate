@@ -1,12 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
-:root{
-    --main-color:#f5e4d9;
-    --bg:#e9c8a9;
-    --maron: #ad8e7b;
-    --border:.1rem solid rgba(255,255,255,.3);
-}
+
 
 *{
     font-family: 'Roboto', sans-serif;
@@ -41,7 +36,7 @@ html::-webkit-slider-thumb{
 }
 
 body{
-    background-color: white ;
+    background-color: #854828 ;
 }
 
 section{
@@ -50,7 +45,7 @@ section{
 
 .heading{
     text-align: center;
-    color: white;
+    color: #854828;
     text-transform: uppercase;
     padding-bottom: 3.5rem;
     font-size: 4rem;
@@ -135,7 +130,7 @@ section{
     position: absolute;
     top:103%;
     right: 70px;
-    background-color: white;
+    background-color: #854828;
     width: 50rem;
     height: 5rem;
     display: flex;

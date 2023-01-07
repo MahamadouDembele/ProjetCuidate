@@ -14,7 +14,9 @@
             $insererUser = $access->prepare('INSERT INTO clients (nom,email,motdepasse) VALUES (?,?,?)');
             $insererUser->execute(array($nom,$email,$motdepasse));
 
-            
+            if($insererUser){
+                header("Location: login.php");
+            }
            // $recupUser = $access-> prepare('SELECT * FROM user WHERE nom =? AND email=? AND motdepasse=?');
            // $recupUser->execute(array($nom,$email,$motdepasse));
            // if($recupUser->rowCount()>0){

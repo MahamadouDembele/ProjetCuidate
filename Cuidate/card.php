@@ -109,12 +109,13 @@
 </header>
 <br>
     <br>
-    <center><h3>Your Cart contain</h3></center>
+    <center><h3>Your Cart contain </h3></center>
     <center>
     <main>
         <table class='table'>
             <thead>
                 <tr>
+                    <th scope='col'>Product image</th>
                     <th scope='col'>Product Name</th>
                     <th scope='col'>Product Price</th>
                     <th scope='col'>Delete Product</th>
@@ -127,6 +128,7 @@
        echo " 
             <tbody>
                 <tr>
+                    <td><img src='../admin/images/$row[image]' width='60' height='60'></td>
                     <td>$row[name]</td>
                     <td>$row[price]</td>
                     <td><a href='delete.php? id=$row[id]' class='btn btn-danger'>Remove</a></td>

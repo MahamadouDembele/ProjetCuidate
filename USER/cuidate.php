@@ -1,3 +1,13 @@
+<?php
+session_start();
+ini_set('display_errors', 'on');
+
+
+
+include('../admin/config.php');
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +21,25 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!-- custom css file link  -->
     <link rel="stylesheet" href="Assets/Css/Cuidate.css">
+    <style>
+    .panier_icon{
+    position: relative;
+        }
+        .myspan {
+    position: absolute;
+    top: -26px;
+    right: -12px;
+    background-color: #fff;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 7px;
+    color: #000;
+}
+    </style>
 </head>
 <body>
    
@@ -36,7 +65,7 @@
         <a href="#contact">contact</a>
     </nav>
     <div class="icons">
-        <a href="#" class="icon_link"><i class="uil uil-shopping-cart-alt nav_icon" ></i></a>
+        <a href="panier.php" class="icon_link panier_icon"><i class="uil uil-shopping-cart-alt nav_icon" ></i><span class="myspan"><?=array_sum($_SESSION['panier'])?></span></a>
         <a href="login.php" class="icon_link"><i class="uil uil-user-circle nav_icon"></i></a>
         <div class="fas fa-bars" id="menu-btn" ></div>
     </div>
@@ -134,18 +163,44 @@
     <h1 class="heading"> our <span>products</span> </h1>
 
     <div class="box-container">
-
-        <div class="box">
+           <?php 
+                           $result = mysqli_query($con,"SELECT * FROM products order by 1 DESC LIMIT 0,8");
+                    while($row = mysqli_fetch_array($result)){
+                        echo " 
+                    <main>
+                    <form action=''>
+                     <div class='box'>
+                     <div class='icons'>
+                     <a href='' class='fas fa-shopping-cart'></a>
+                     <a href='#' class='fas fa-heart'></a>
+                      </div>            
+                        <div class='card' style='width: 31rem;'>
+                          <div class='image'>
+                            <img src='../admin/images/$row[image]' class='card-img-top'>
+                          </div>
+                          <div class='card-body'>
+                          <h5 class='card-title'>$row[name]</h5>
+                          <p class='card-desc'>$row[description]</p>
+                          <div class='price'>$row[price]</div>
+                          <a href='ajouter_panier.php?id=$row[id]' class='btn btn-primary'>Add To Cart</a>
+                          <a href='produit.php? pdt=$row[id]' class='btn btn-danger'>View Product</a>
+                        </div>
+                    </div>  
+                    </form>      
+            </div> </main>"
+            ;} ?>
+      <!-- 
+         <div class="box">
             <div class="icons">
                 <a href="#" class="fas fa-shopping-cart"></a>
                 <a href="#" class="fas fa-heart"></a>
                 
             </div>
             <div class="image">
-                <img src="Assets/img/product1.jpeg" alt="">
+               <img src='../admin/images/$row[image]' class='card-img-top'>
             </div>
             <div class="content">
-                <h3>Routine Nutrition Exquise à l'Huile Argan</h3>
+                <h3>$row[name]</h3>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -153,7 +208,7 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <div class="price">100Dh</div>
+                <div class="price">$row[price]</div>
                 <div>
                     <button class="btn">ADD TO CART</button>
                 </div>
@@ -284,12 +339,12 @@
                     <button class="btn">ADD TO CART</button>
                 </div>
             </div>
-        </div> 
+        </div> -->
 
        
     </div>
 
-    </div>
+  
 
 </section>
 

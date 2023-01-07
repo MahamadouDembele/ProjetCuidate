@@ -1,6 +1,6 @@
 <?php
 include('../admin/config.php');
-
+include('functions.php');
 ?>
 
 
@@ -34,9 +34,7 @@ include('../admin/config.php');
             margin-top: 20px;
             min-height: 200px;
         }
-        .card-desc{
-            
-        }
+      
 
     </style>
 
@@ -49,68 +47,68 @@ include('../admin/config.php');
 
 <header class="header">
 
-    <a href="#" class="logo">
-        <img src="" class="Cuidate">
-    </a>
-    <span> Cuidate</span>
+        <a href="#" class="logo">
+            <img src="" class="Cuidate">
+        </a>
+        <span> Cuidate</span>
 
-    <nav class="navbar">
-        <a href="#home">home</a>
-        <a href="#about">about</a>
-        <a href="#products">products</a>
-        <a href="#review">review</a>
-        <a href="#contact">contact</a>
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#products">products</a>
+            <a href="#review">review</a>
+            <a href="#contact">contact</a>
 
-        
-    </nav>
+            
+        </nav>
     
 
-    <div class="icons">
-        <div class="fas fa-search" id="search-btn"></div>
-        <div class="fas fa-shopping-cart" id="cart-btn"></div>
-        <div class="fas fa-bars" id="menu-btn" ></div>
-    </div>
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-bars" id="menu-btn" ></div>
+        </div>
 
-    <div class="search-form">
-        <input type="search" id="search-box" placeholder="search here...">
-        <label for="search-box" class="fas fa-search"></label>
-    </div>
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
 
-    <div class="cart-items-container">
-        <div class="cart-item">
-            <span class="fas fa-times"></span>
-            <img src="#" alt="">
-            <div class="content">
-                <h3>cart item 01</h3>
-                <div class="price">100Dh/-</div>
-            </div>
+        <div class="cart-items-container">
+                <div class="cart-item">
+                    <span class="fas fa-times"></span>
+                    <img src="#" alt="">
+                    <div class="content">
+                        <h3>cart item 01</h3>
+                        <div class="price">100Dh/-</div>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <span class="fas fa-times"></span>
+                    <img src="#" alt="">
+                    <div class="content">
+                        <h3>cart item 02</h3>
+                        <div class="price">100Dh/-</div>
+                    </div>
+                </div>
+                <div class="cart-item">
+                        <span class="fas fa-times"></span>
+                        <img src="#" alt="">
+                        <div class="content">
+                            <h3>cart item 03</h3>
+                            <div class="price">100Dh/-</div>
+                        </div>
+                </div>
+                <div class="cart-item">
+                        <span class="fas fa-times"></span>
+                        <img src="#" alt="">
+                        <div class="content">
+                            <h3>cart item 04</h3>
+                            <div class="price">100Dh/-</div>
+                        </div>
+                </div>
+                    <a href="#" class="btn">checkout now</a>
         </div>
-        <div class="cart-item">
-            <span class="fas fa-times"></span>
-            <img src="#" alt="">
-            <div class="content">
-                <h3>cart item 02</h3>
-                <div class="price">100Dh/-</div>
-            </div>
-        </div>
-        <div class="cart-item">
-            <span class="fas fa-times"></span>
-            <img src="#" alt="">
-            <div class="content">
-                <h3>cart item 03</h3>
-                <div class="price">100Dh/-</div>
-            </div>
-        </div>
-        <div class="cart-item">
-            <span class="fas fa-times"></span>
-            <img src="#" alt="">
-            <div class="content">
-                <h3>cart item 04</h3>
-                <div class="price">100Dh/-</div>
-            </div>
-        </div>
-        <a href="#" class="btn">checkout now</a>
-    </div>
 
 </header>
 
@@ -153,38 +151,36 @@ include('../admin/config.php');
         </div>
 
     </div>
-
+<!--
 </section>
 
 <!-- about section ends -->
 
 <!-- about Products start -->
+
 <section class="products" id="products">
 
     <h1 class="heading"> our <span>products</span> </h1>
 
-    <div class="box-container">
-
-        <div class="box">
-            <?php 
-
-        $result = mysqli_query($con,"SELECT * FROM products");
-            while($row = mysqli_fetch_array($result)){
-                echo "
-                <main>
-            <div class='card' style='width: 27rem;'>
-                    <img src='../admin/images/prod3.jpg' class='card-img-top'>
-                <div class='card-body'>
-                    <h5 class='card-title'>$row[name]</h5>
-                    <p class='card-desc'>$row[description]</p>
-                    <p class='card-text'>$row[price]</p>
-                    <a href='validate.php? id=$row[id]' class='btn btn-primary'>Add To Cart</a>
-                </div>
-            </div>
-                </main>";}
+            <div class="box-container">
+                <div class="box">
+                <?php
+                $result = mysqli_query($con,"SELECT * FROM products order by 1 DESC LIMIT 0,8");
+                    while($row = mysqli_fetch_array($result)){
+                        echo "
+                        <main>
+                    <div class='card' style='width: 31rem;'>
+                            <img src='../admin/images/$row[image]' class='card-img-top'>
+                        <div class='card-body'>
+                            <h5 class='card-title'>$row[name]</h5>
+                            <p class='card-desc'>$row[description]</p>
+                            <p class='card-text'>$row[price]</p>
+                            <a href='validate.php? id=$row[id]' class='btn btn-primary'>Add To Cart</a>
+                            <a href='validate.php? id=$row[id]' class='btn btn-danger'>View Product</a>
+                        </div>
+                    </div>
+                        </main>";}
                 ?>
-           
-           
             <!--<div class="icons">
                 <a href="#" class="fas fa-shopping-cart"></a>
                 <a href="#" class="fas fa-heart"></a>
@@ -208,7 +204,7 @@ include('../admin/config.php');
                     <button class='btn'>ADD TO CART</button>
                 </div>
             </div>-->
-        </div>
+       <!-- </div>-->
    
 
         <!--<div class="box">
@@ -337,8 +333,8 @@ include('../admin/config.php');
             </div>
         </div>  -->
     </div>  
-</section>
-
+         </section>
+    
 <!-- Products section ends -->
 
 <!-- review section starts  -->
@@ -439,7 +435,7 @@ include('../admin/config.php');
         <a href="#">contact</a>
     </div>
 
-    <div class="credit">t'on bien etres chez <span>Cuidate </span> | for you /div>
+    <div class="credit">t'on bien etres chez <span>Cuidate </span> | for you </div>
 
 </section>
 

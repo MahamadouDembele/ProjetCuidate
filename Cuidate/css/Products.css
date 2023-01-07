@@ -11,7 +11,7 @@
     border:var(--border);
     padding: 2rem;
     box-shadow: 5px 5px 10px var(--main-color);
-    background-color:var(--boxcol);
+    background-color:white;
     background-color: #fff;
 }
 
