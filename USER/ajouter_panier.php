@@ -36,7 +36,7 @@ if(!$con) die('Erreur : '.mysqli_connect_error());
     }
 
    //redirection vers la page index.php
-   header("Location:cuidate.php");
+   header("Location:index.php");
 
 
   }
