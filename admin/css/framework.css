@@ -1,0 +1,325 @@
+  .flex {
+    display: flex;
+  }
+  /* .f-wrap {
+    flex-wrap: wrap;
+  } */
+  .align-center {
+    align-items: center;
+  }
+
+  
+  .space-between {
+    justify-content: space-between;
+  }
+
+  .display-block {
+    display: block;
+  }
+
+  .display-Inblock {
+    display: inline-block;
+  }
+
+  .display-grid {
+    display: grid;
+  }
+  @media (max-width: 767px) {
+    .block-mobile {
+      display: block;
+    }
+    .hide-mobile {
+      display: none;
+    }
+    .composant{
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    }
+   
+
+  }
+
+color
+
+.c-black {
+    color: black;
+  }
+  .c-white {
+    color: white;
+  }
+  .c-pri {
+    color: #5e493c;
+  }
+  .c-sec{
+    color: #bb9376;
+  }
+  .bg-blue {
+    background-color: var(--blue-color);
+  }
+  .c-orange {
+    color: var(--orange-color);
+  }
+  .bg-pri {
+    background-color: #5e493c;
+  }
+  .c-grey {
+    color: var(--grey-color);
+  }
+
+
+
+.bg-white{
+    color: rgb(0, 0, 0);
+}
+
+.gap-20 {
+    gap: 20px;
+  }
+
+
+
+/* Margin & padding */
+  .p-5{
+    padding: 5px;
+  }
+  .p-10 {
+    padding: 10px;
+  }
+  .p-15 {
+    padding: 15px;
+  }
+  .p-20 {
+    padding: 20px;
+  }
+  .pt-10 {
+    padding-top: 10px;
+  }
+  .pt-15 {
+    padding-top: 15px;
+  }
+  .pt-20 {
+    padding-top: 20px;
+  }
+  .pt-43 {
+    padding-top: 43px;
+  }
+  .pb-10 {
+    padding-bottom: 10px;
+  }
+  .pb-15 {
+    padding-bottom: 15px;
+  }
+  .pb-20 {
+    padding-bottom: 20px;
+  }
+  .pb-30 {
+    padding-bottom: 30px;
+  }
+  .pl-15 {
+    padding-left: 15px;
+  }
+  .pl-24 {
+    padding-left: 24px;
+  }
+  .pl-37 {
+    padding-left: 37px;
+  }
+  .pr-10 {
+    padding-right: 10px;
+  }
+  .marg-0 {
+    margin: 0;
+  }
+  .margBottom-0{
+    margin-bottom: 0;
+  }
+  .marg-enrg {
+    margin: 10 auto;
+  }
+  .marg-enrg1 {
+    margin: 0 auto;
+    width: 150px;
+    display: block;
+  }
+  .marg-enrg2 {
+    margin: 0 auto;
+    width: 100px;
+    display: block;
+    padding-top: 5px;
+    padding-left: 5px;
+  }
+
+  .marg-15 {
+    margin: 15px;
+  }
+  .marg-20 {
+    margin: 20px;
+  }
+  .margTop-0 {
+    margin-top: 0;
+  }
+  .margTop-5 {
+    margin-top: 5px;
+  }
+  .margTop-10 {
+    margin-top: 10px;
+  }
+  .margTop-15 {
+    margin-top: 15px;
+  }
+  .margTop-20 {
+    margin-top: 20px;
+  }
+  .margTop-25 {
+    margin-top: 25px;
+  }
+  .margTop-10 {
+    margin-right: 10px;
+  }
+  .margRight-15 {
+    margin-right: 15px;
+  }
+  .margRight-25 {
+    margin-right: 25px;
+  }
+
+  .margRight-50 {
+    margin-right:50px;
+  }
+  .margBottom-5 {
+    margin-bottom: 5px;
+  }
+  .margBottom-10 {
+    margin-bottom: 10px;
+  }
+  .margBottom-15 {
+    margin-bottom: 15px;
+  }
+  .margBottom-20 {
+    margin-bottom: 20px;
+  }
+  .margBottom-25 {
+    margin-bottom: 25px;
+  }
+  .margBottom-40{
+    margin-bottom: 40px;
+  }
+  .margLeft-15{
+    margin-left: 20px;
+  }
+  
+  .margLeft-40{
+    margin-left: 40px;
+  }
+
+
+
+  /* Position */
+  .p-relative {
+    position: relative;
+  }
+  .p-absolute {
+    position: absolute;
+  }
+  
+  /* decoration */
+  .txt-center {
+    text-align: center;
+  }
+
+
+  /* Font Size */
+  .fs-13 {
+    font-size: 13px;
+  }
+  .fs-14 {
+    font-size: 14px;
+  }
+  .fs-15 {
+    font-size: 15px;
+  }
+  .fs-25 {
+    font-size: 25px;
+  }
+  .fw-bold {
+    font-weight: bold;
+  }
+
+  /*media quoery */
+  @media (max-width: 767px) {
+    .txt-c-mobile {
+      text-align: center;
+    }
+  }
+ 
+  /* Border */
+  .rad-6 {
+    border-radius: 6px;
+  }
+  .rad-10 {
+    border-radius: 10px;
+  }
+  .rad-demi {
+    border-radius: 50%;
+  }
+  .b-none {
+    border: none;
+  }
+
+  .border-ccc {
+    border: 1px solid #ccc;
+  }
+
+
+
+  
+  
+
+  /* Start Width + Height */
+  .w-full {
+    width: 100%;
+  }
+  .w-60 {
+    width: 60%;
+  }
+  .w-85{
+    width: 85%;
+  }
+  .w-fit {
+    width: fit-content;
+  }
+  .h-full {
+    height: 100%;
+  }
+  .h-100 {
+    height: 100px;
+  }
+  .w-80{
+    width: 80%;
+  }
+  .w-95{
+    width: 95%;
+  }
+  
+
+  /* Fleex */
+  .center-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .between-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .btn-shape {
+    padding: 4px 10px;
+    border-radius: 6px;
+  }
+  .d-grid {
+    display: grid;
+  }
+  /* End Components */
+
