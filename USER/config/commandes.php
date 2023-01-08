@@ -61,7 +61,7 @@ function afficherUnProduit($id)
 {
 	if(require("connexion.php"))
 	{
-		$req=$access->prepare("SELECT * FROM produits WHERE id=?");
+		$req=$access->prepare("SELECT * FROM products WHERE id=?");
 
         $req->execute(array($id));
 
