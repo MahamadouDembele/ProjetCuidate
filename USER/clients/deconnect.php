@@ -7,7 +7,7 @@ if (isset($_SESSION['clientSession'])){
 
     session_destroy();
 
-    header("Location: ../cuidate.php");
+    header("Location: ../index.php");
 }
 
 ?>
