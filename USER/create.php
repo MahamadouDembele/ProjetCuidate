@@ -17,15 +17,7 @@
             if($insererUser){
                 header("Location: login.php");
             }
-           // $recupUser = $access-> prepare('SELECT * FROM user WHERE nom =? AND email=? AND motdepasse=?');
-           // $recupUser->execute(array($nom,$email,$motdepasse));
-           // if($recupUser->rowCount()>0){
-              // $_SESSION['nom'] = $nom;
-               // $_SESSION['email'] = $email;
-                //$_SESSION['motdepasse'] = $motdepasse;
-            //}
-
-           // echo $_SESSION['id'];
+           
         }
         else{
             echo "Veullez completer les champs....";

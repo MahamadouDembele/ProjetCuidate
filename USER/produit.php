@@ -1,7 +1,7 @@
 <?php 
    session_start();
   //connexion à la base de données
-$con = mysqli_connect("localhost","root","root","online");
+$con = mysqli_connect("localhost","root","","online");
 //verifier la connexion
 if(!$con) die('Erreur : '.mysqli_connect_error());
    //supprimer les produits
